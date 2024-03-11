@@ -17,7 +17,11 @@ class PlayerEvents {
 
   static create(wsBaseUrl: string | null = null) {
     if (!wsBaseUrl) {
-      wsBaseUrl = `${import.meta.env.VITE_API_WEBSOCKET_BASE_URL}events`
+      let base: string = import.meta.env.VITE_API_WEBSOCKET_BASE_URL
+      if (!base.startsWith("ws")) {
+        base = window.location.origin.replace("http", "ws") + base;
+      }
+      wsBaseUrl = `${base}events`
     }
     return new PlayerEvents(wsBaseUrl)
   }

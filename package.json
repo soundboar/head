@@ -1,6 +1,6 @@
 {
   "name": "soundboard",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "generate": "openapi-typescript http://127.0.0.1:8000/openapi.json -o ./src/lib/api/types.d.ts"
+    "generate": "openapi-typescript http://127.0.0.1:8000/api/openapi.json -o ./src/lib/api/types.ts"
   },
   "dependencies": {
     "daisyui": "^4.7.2",

@@ -1,5 +1,5 @@
 import createClient from 'openapi-fetch'
-import { type paths } from '@/lib/api/types.d'
+import { type paths } from '@/lib/api/types'
 
 const apiBaseUrl: string = import.meta.env.VITE_API_BASE_URL
 const baseUrl = apiBaseUrl.endsWith("/") ? apiBaseUrl.substring(0, apiBaseUrl.length - 1) : apiBaseUrl;
