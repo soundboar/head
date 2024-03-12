@@ -20,7 +20,7 @@
     </div>
     <div class="swap-on card shadow p-4 bg-neutral-content text-neutral">
       <button class="absolute right-0 top-0 pr-2 pt-0.5" @click="editFile = false">&times;</button>
-      <a class="btn btn-block btn-neutral btn-sm mb-1" :href="player?.downloadUrl(file.id)">Download</a>
+      <a class="btn btn-block btn-neutral btn-sm mb-1" :href="player?.downloadUrl(file.id)" @click="editFile = false">Download</a>
       <button class="btn btn-block btn-error btn-sm" @click="del()">Delete</button>
     </div>
   </div>
